@@ -1,0 +1,70 @@
+﻿@model Prayaas_Website.Models.Donor
+
+@{
+    ViewData["Title"] = "DonorUser";
+}
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+<h1>Registration for Donor User</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DonorUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BloodGroupID" class="control-label"></label>
+                <select asp-for="BloodGroupID" class ="form-control" asp-items="ViewBag.BloodGroupID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastDonationDate" class="control-label"></label>
+                <input asp-for="LastDonationDate" class="form-control" type="date" />
+                <span asp-validation-for="LastDonationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adhaar" class="control-label"></label>
+                <input asp-for="Adhaar" class="form-control" />
+                <span asp-validation-for="Adhaar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNo" class="control-label"></label>
+                <input asp-for="ContactNo" class="form-control" />
+                <span asp-validation-for="ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CityID" class="control-label"></label>
+                <select asp-for="CityID" class ="form-control" asp-items="ViewBag.CityID"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GenderID" class="control-label"></label>
+                <select asp-for="GenderID" class ="form-control" asp-items="ViewBag.GenderID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

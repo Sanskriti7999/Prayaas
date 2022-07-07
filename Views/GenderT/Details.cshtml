@@ -1,0 +1,29 @@
+﻿@model Prayaas_Website.Models.GenderT
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+
+<div>
+    <h2>Gender</h2>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.GenderID">Edit</a> |
+    <a href="../GenderT/Index">Back to List</a>
+</div>

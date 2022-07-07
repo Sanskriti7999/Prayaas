@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Prayaas_Website.Models.Seeker>
+
+@{
+    ViewData["Title"] = "SeekerList";
+}
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="w3-container">
+        <a href="../Home/Index" class="w3-btn w3-red">Logout</a>
+    </div>
+
+<h2>SeekerList</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adhaar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationDate)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.BloodGroups)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.User.EmailAddress)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adhaar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationDate)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.BloodGroups.BloodGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender.Gender)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.User.EmailAddress)
+            </td>*@
+            
+        </tr>
+}
+    </tbody>
+</table>

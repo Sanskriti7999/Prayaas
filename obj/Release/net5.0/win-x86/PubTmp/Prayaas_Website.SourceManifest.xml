@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="F:\Prayaas_Website\obj\Release\net5.0\win-x86\PubTmp\Out\" />
+  <dbfullsql path="F:\Prayaas_Website\obj\Release\net5.0\win-x86\PubTmp\EFSQLScripts\Prayaas_Website.Models.PrayaasDbContext.sql" />
+</sitemanifest>

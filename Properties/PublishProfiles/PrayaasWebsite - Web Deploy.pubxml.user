@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFGmo8cdpfEKcf+9xuehaFQAAAAACAAAAAAAQZgAAAAEAACAAAABefFJ1BeM6WWDq+lwpVAsQTlbavsgCq6mAkc4jrEcjxQAAAAAOgAAAAAIAACAAAACKP5NhHgzcIYT5qPnLOYrjhOYg5xv7iB9fE3h9YaRutYAAAACA54pw6hWZWaeBpfR0Sa1qi69iaQLmsTZ1tTDvLOV/XvlHmuKEx1IF/nmKLyaGyuTazTwgoZe4KafmEr0h0GVDbGjR4NxZyqRwfoI+mqWLa/XBnZFuU4LOhXxDioDfQMGOEyznL7VsnP4IeaqvMDflHzMbXGt16EZNrbqkRhaJ1kAAAAAlWt+EWrLKG6vCEKYj7lJe6m1kTOiaX+/iOQtMO371E3t323/Zz6Sb7ORok6qJAK1w3EJkh4YFVEa6EOe0G9Xn</EncryptedPassword>
+    <History>True|2022-07-03T14:36:23.1824417Z;False|2022-07-03T18:59:12.5567678+05:30;False|2022-07-03T18:47:21.6550875+05:30;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MyDBConnection">
+      <Value>Data Source=tcp:prayaas-websitedbserver.database.windows.net,1433%3bInitial Catalog=Prayaas_Website_db%3bUser Id=adminuser%40prayaas-websitedbserver%3bPassword=Admin%40123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Prayaas_Website.Models.PrayaasDbContext">
+      <Value>Data Source=tcp:prayaas-websitedbserver.database.windows.net,1433%3bInitial Catalog=Prayaas_Website_db%3bUser Id=adminuser%40prayaas-websitedbserver%3bPassword=Admin%40123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

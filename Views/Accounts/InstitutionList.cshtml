@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Prayaas_Website.Models.Institution>
+
+@{
+    ViewData["Title"] = "InstitutionList";
+}
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+<h2>InstitutionList</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InstitutionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstitutionTypeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstitutionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstitutionTypeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.EmailAddress)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>

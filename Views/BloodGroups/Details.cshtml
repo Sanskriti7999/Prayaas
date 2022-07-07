@@ -1,0 +1,29 @@
+﻿@model Prayaas_Website.Models.BloodGroups
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+<div>
+    <h2>BloodGroups</h2>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BloodGroup)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BloodGroupID">Edit</a> |
+    <a href="../Index">Back to List</a>
+</div>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PrayaasWebsite" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\Prayaas_Website\\obj\\Release\\net5\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Prayaas_Website.Models.PrayaasDbContext" description="" value="Data Source=tcp:prayaas-websitedbserver.database.windows.net,1433;Initial Catalog=Prayaas_Website_db;User Id=adminuser@prayaas-websitedbserver;Password=Admin@123" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^F:\\Prayaas_Website\\obj\\Release\\net5\.0\\win-x86\\PubTmp\\EFSQLScripts\\Prayaas_Website\.Models\.PrayaasDbContext\.sql$" />
+  </parameter>
+</parameters>

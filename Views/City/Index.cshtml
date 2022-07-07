@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Prayaas_Website.Models.CityT>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Settings
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+                
+                <li><a href="../BloodGroups/Index">Blood Groups</a></li>
+                <li><a href="../Accounts/AllNewUserRequests">User Requests </a></li>
+                <li><a href="../RequestType/Index">Request Type</a></li>
+                <li><a href="../Users/Index">User Type</a></li>  
+                <li><a href="../Home/Index">LogOut</a></li>  
+    </ul>
+
+  </div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CityID">Edit</a>  |
+                <a asp-action="Delete" asp-route-id="@item.CityID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

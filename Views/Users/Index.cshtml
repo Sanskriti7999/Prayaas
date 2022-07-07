@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Prayaas_Website.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="~/css/venobox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+@*<h1>Index</h1>*@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Settings
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+                
+                <li><a href="../BloodGroups/Index">Blood Groups</a></li>
+                <li><a href="../Accounts/AllNewUserRequests">User Requests </a></li>
+                <li><a href="../RequestType/Index">Request Type</a></li>
+                <li><a href="../City/Index">City</a></li>  
+                <li><a href="../Home/Index">LogOut</a></li>  
+    </ul>
+
+  </div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountStatus.accountStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserType.UserType)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UserID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
